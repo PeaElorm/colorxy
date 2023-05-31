@@ -7,10 +7,11 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 10px;
     
 }
 
-.centered-button{
+.centered-button1, .centered-button2{
     padding: 15px 32px;
     border-radius: 20px;
     cursor: pointer;

@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="container">
-<button class="centered-button" onclick="changeColor()">click to Recolor</button>
+<button class="centered-button1" onclick="changeColor()">Generate Color</button>
+<button class="centered-button2" onclick="generateGradient()">Generate gradient</button>
     </div>
 
     <script>
@@ -23,9 +24,21 @@
 
         function changeColor(){
             let newColor = getRandomColor();
+            document.querySelector('.centered-button1').textContent = newColor;
+            document.body.style.background ='none';
             document.body.style.backgroundColor = newColor
-            document.querySelector('.centered-button').textContent = newColor;
 
+        }
+
+        function generateGradient(){
+            let color1 = getRandomColor();
+            let color2 = getRandomColor();
+            let color3 = getRandomColor();
+            let gradientStyle = `repeating-linear-gradient(45deg, ${color1}, ${color2}, ${color3})`
+            let gradientCode = `${color1}, ${color2}, ${color3}`
+
+            document.body.style.background = gradientStyle;
+            document.querySelector('.centered-button2').textContent = gradientCode
         }
     </script>
 </body>
